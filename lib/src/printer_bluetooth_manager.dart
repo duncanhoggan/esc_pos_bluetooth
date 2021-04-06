@@ -147,7 +147,7 @@ class PrinterBluetoothManager {
     int chunkSizeBytes = 20,
     int queueSleepTimeMs = 20,
   }) async {
-    if (ticket == null || bytes.isEmpty) {
+    if (bytes == null || bytes.isEmpty) {
       return Future<PosPrintResult>.value(PosPrintResult.ticketEmpty);
     }
     return writeBytes(
